@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="project.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+            <header>
+                <h5>Retrograde</h5>
+                <img src="images/pac.png">
+    
+                <a href="home.html">Home</a>
+                <a href="form.html">Register</a>
+                <a href="tetris.html">Tetris</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="aboutus.html">About Me</a>
+                <h5 id="welcome"></h5>
+                    
+            </header>
+        <form name="form" action="#">
+
+            <div id="formdiv" >
+                <div id="labeldiv">
+                        <label>Username</label>
+                        <label>Password</label>
+                        <label>First Name</label>
+                        <label>Second Name</label>
+                        <label>Email</label>
+                        <label>Mobile</label>
+                        <label>Department</label>
+                        
+                    </div>
+                    <div id="inputdiv">
+                        
+                        <input placeholder="Enter your username" pattern="[a-zA-Z]{5,8}" oninvalid="setCustomValidity('Enter 5-8 letters only')" oninput="setCustomValidity('')" type="text" required>
+                        <input placeholder="Enter your password" required pattern=".{7,}" oninvalid="setCustomValidity('Enter 7 characters or more')" oninput="setCustomValidity('')" type="password" name="">
+                        <input placeholder="Enter your first name" required pattern="[a-zA-Z]+" oninvalid="setCustomValidity('Enter letters only')" oninput="setCustomValidity('')" type="text" name="">
+                        <input placeholder="Enter your last name" required pattern="[a-zA-Z]+" oninvalid="setCustomValidity('Enter letters only')" oninput="setCustomValidity('')" type="text" name="">
+                        <input placeholder="Enter a valid email" pattern="^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$" oninvalid="setCustomValidity('Enter valid email')" oninput="setCustomValidity('')" required type="text" name="">
+                        <input placeholder="Enter your phone number" required pattern="^(01)([0-9]{9})$" oninvalid="setCustomValidity('invalid phone number')" oninput="setCustomValidity('')" type="text" name="">
+                        <select required type="text" name="">    
+                            <option  >gis</option>
+                            <option>UI</option>  
+                            <option>civil</option>
+                            <option>enterprise</option>
+                            </select>
+                        
+                    </div> 
+
+            </div>
+
+           
+            <div id="inputbtn"><input type="submit"></div>
+        </form>
+        <script type="text/javascript" src="form.js"></script>
+
+
+    </body>
+</html>

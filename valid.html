@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>
+   
+    
+</title>       
+</head>
+<body style="color: white;background-color: darkseagreen">
+     <div style="background-color: black; position: relative;margin-top: 20px"> <h1 style="margin: 10px; padding-left:300px;<b>"><span style="background-color: crimson"> PC</span>  GAMER</h1>
+      
+                <div style="position: absolute; top: 10px; margin-left: 1000px"><a href="https://plus.google.com/" target="_blank"> <img src="Google-plus-icon.png" width="20px" /> </a>
+                <a href="https://www.linkedin.com/uas/login" target="_blank"> <img src="link.png" width="20px" /> </a>
+                <a href="https://www.facebook.com/" target="_blank">  <img src="face.png" width="20px" /> </a>
+                <a href="https://twitter.com/twitter?lang=en" target="_blank"> <img src="twitter.png" width="20px" /> </a>
+            </div>
+            
+       </div>
+ <div style="background-color: crimson; height: 50px;<b>">
+<ul style="padding: 10px; font-size: 24px;margin-top:0px">
+    <il style="padding-left: 270px"> <a href="home.html"> Home </a> </il> 
+    <il style="padding-left: 100px"> <a href="gallery.html">Gallery</a></il>
+    <il style=" padding-left: 100px"> Form </il>
+    <il style=" padding-left: 100px"> <a href="game.html" > About us </a></il>
+    <il style=" padding-left: 100px"><a href="game.html"> Game </a></il>
+</ul> </div>
+    <form name="myform" action"" onsubmit="return(mycheck())">
+   <table style="margin: 80px; position: absolute; top: 60px;margin-left: 400px">
+        <tr> <td> User Name: </td> <td><input  type="text" name="uname"  /><span id="mys"></span>   Required, 5-8 Characters </td></tr> 
+        <tr> <td>Password: </td> <td><input type="password" name="password" /> <span id="myp"></span> Required, 5-8 Characters </td> </tr>
+        <tr> <td>Confirm Password:</td><td> <input type="password" name="cpassword" /> same as Password</td></tr>
+        <tr> <td>First Name:</td><td> <input type="text" name="fname" /> </td></tr>
+        <tr> <td>Last Name:</td><td> <input type="text" name="lname" />   </td></tr> 
+        <tr> <td>Email: </td><td> <input type="text" name="mail" /> </td></tr> 
+        <tr> <td>Mobil:</td><td> <input type="text" name="mob" />Only Numbers, 11 Digits, start "01" </td></tr>
+        <tr> <td>Department:</td><td> <input type="text" /> </td></tr><br> <br>
+       <tr><td>  </td><td><input type="submit"  />  </td></tr>   
+    
+    </table>                                                                                                                                    
+    </form>
+<script>
+function mycheck()
+    {
+         document.forms.myform.uname.value;
+        if(document.forms.myform.uname.value ==" " || document.forms.myform.uname.value.length<8 || document.forms.myform.uname.value.length<11)
+            {
+                document.getElementById("mys").innerHTML="you must enter from 5 to 8 charachters"
+                
+            }
+        
+        document.forms.myform.password.value;
+        if(document.forms.myform.password.value==" " || document.forms.myform.password.value.length<8 || document.forms.myform.password.value.length<11)
+          {
+            document.getElementById("myp").innerHTML="you must enter from 5 to 8 charachters"
+               
+          }
+        
+    var p =document.forms.myform.password.value;
+    var c =document.forms.myform.cpassword.value;
+        if(c!=p || c=="" || p=="")
+            {
+                alert ("confirm password must be the same as the password");
+                
+            }
+        var m=document.forms.myform.MobileNumber.value;
+        if (m=="" || m.length !=11)
+            {alert("the mobile number should be 11 digits")}
+        if (m.substring(0,2) != "01")
+            {alert("the first 2 digit must be 01")}
+        
+        
+        
+         var x= document.forms.myform.fname.value;
+        if (isNaN(x))
+            {
+                alert("Must input First Name");
+                return false;
+            }
+        var y= document.forms.myform.lname.value;
+        if(isNaN(y) )
+            {
+                alert("Must input Last Name");
+                return false;
+            } 
+
+     var z= document.forms.myform.mob.value;
+        if (isNaN(z) && z.length<12)
+            {
+                alert("Must input numbers");
+                return false;
+            }
+       
+    }
+    
+    
+    
+</script>
+    
+    
+   
+    
+    
+</body>
+</html>
